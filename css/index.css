@@ -1,0 +1,237 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+  /* Now 10px = 1rem! */
+  /* for everything else, rem = px/10 */
+  /* you can safely nest rems, it's still 1rem = 10px */
+}
+html body {
+  font-size: 16px;
+  /* px fallback */
+  font-size: 1.6rem;
+  /* default font-size for document */
+  line-height: 1.5;
+  /* a nice line-height */
+  font-family: 'Open Sans', sans-serif;
+}
+html body .hero picture img {
+  width: 100%;
+}
+html footer {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+html footer small {
+  font-size: 10px;
+  font-size: 1rem;
+}
+nav div {
+  background-color: #fff;
+  max-height: 5.5rem;
+  border: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+}
+nav div .icon {
+  padding-left: 3.7rem;
+  margin-top: 0.6rem;
+  font-size: 2.7rem;
+  color: #80888c;
+}
+nav div img.logo {
+  width: 10rem;
+  margin: 0.5rem;
+}
+@media (min-width: 1200px) {
+  nav div {
+    justify-content: flex-start;
+    padding-left: 3.7rem;
+  }
+  nav div .icon {
+    display: none;
+  }
+}
+nav div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  display: none;
+}
+nav div ul.topnav.responsive {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5.5rem;
+  border: 2px solid red;
+  background-color: #fff;
+}
+nav div ul.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+@media (min-width: 1200px) {
+  nav div ul {
+    display: flex;
+  }
+}
+nav div ul li {
+  align-items: center;
+  min-height: 1.4rem;
+}
+nav div ul li a:link {
+  text-decoration: none;
+}
+nav div ul li a:hover {
+  color: #1d82aa;
+}
+nav div ul li a {
+  display: block;
+  color: #222;
+  text-align: center;
+  padding: 1.4rem 1.6rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+nav div #shopping-cart {
+  padding-right: 3.7rem;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  color: #80888c;
+}
+@media (min-width: 1200px) {
+  nav div #shopping-cart {
+    position: absolute;
+    right: 0;
+  }
+}
