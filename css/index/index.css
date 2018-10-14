@@ -129,10 +129,12 @@ table {
 html {
   font-size: 62.5%;
   /* Now 10px = 1rem! */
+  height: 100%;
   /* for everything else, rem = px/10 */
   /* you can safely nest rems, it's still 1rem = 10px */
 }
 html body {
+  height: 100%;
   font-size: 16px;
   /* px fallback */
   font-size: 1.6rem;
@@ -141,8 +143,101 @@ html body {
   /* a nice line-height */
   font-family: 'Open Sans', sans-serif;
 }
-html body .hero picture img {
+html body h1 {
+  font-size: 3rem;
+}
+html body .main-div {
+  height: 100%;
+}
+html body .main-div .hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/hero.jpg");
+  /* Set a specific height */
+  height: 50%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+html body .main-div .hero-image .hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+@media (min-width: 722px), (min-width: 1200px) {
+  html body .main-div .hero-image .hero-text {
+    text-align: left;
+    left: 15rem;
+    top: 50%;
+  }
+}
+html body .main-div .hero-image .hero-text button {
+  background-color: #80888c;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+html body .main-div .hero-image .hero-text button:hover {
+  background-color: #5a5f62;
+}
+html body .main-div .first-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 35rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 722px), (min-width: 1200px) {
+  html body .main-div .first-container {
+    height: 17.5rem;
+  }
+}
+html body .main-div .first-container .first-item {
   width: 100%;
+  background-color: white;
+}
+@media (min-width: 722px), (min-width: 1200px) {
+  html body .main-div .first-container .first-item {
+    width: 50%;
+  }
+}
+html body .main-div .first-container .second-item {
+  width: 100%;
+  background-color: lightgray;
+}
+@media (min-width: 722px), (min-width: 1200px) {
+  html body .main-div .first-container .second-item {
+    width: 50%;
+  }
+}
+html body .main-div .third-item {
+  width: 100%;
+  height: 17.5rem;
+  background-color: red;
+}
+@media (min-width: 722px), (min-width: 1200px) {
+  html body .main-div .third-item {
+    height: 32rem;
+  }
+}
+html body .main-div .fourth-item {
+  width: 100%;
+  height: 15.3rem;
+  background-color: gray;
+}
+@media (min-width: 722px), (min-width: 1200px) {
+  html body .main-div .fourth-item {
+    height: 60rem;
+    background-color: white;
+  }
 }
 html footer {
   font-size: 13px;
@@ -152,10 +247,14 @@ html footer small {
   font-size: 10px;
   font-size: 1rem;
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 nav div {
   background-color: #fff;
   max-height: 5.5rem;
-  border: 2px solid green;
   display: flex;
   justify-content: space-between;
 }
@@ -191,8 +290,9 @@ nav div ul.topnav.responsive {
   position: absolute;
   left: 0;
   top: 5.5rem;
-  border: 2px solid red;
   background-color: #fff;
+  width: 50%;
+  z-index: 1;
 }
 nav div ul.topnav.responsive a {
   float: none;

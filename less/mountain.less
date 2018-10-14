@@ -1,3 +1,9 @@
+@import "reset.less";
+
+@import "variable.less";
+
+@import "nav.less";
+
 html {
     font-size: 62.5%; /* Now 10px = 1rem! */
     height: 100%;
@@ -17,7 +23,7 @@ html {
         
         .hero-image {
             /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/hero.jpg");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/mountainHero.jpg");
         
             /* Set a specific height */
             height: 50%;
@@ -41,39 +47,18 @@ html {
                 transform: translate(-50%, -50%);
                 color: @background-color;
                 button {
-                    .button(@alt-color);
+                    .button(@primary-color);
                 }
             }
         }
-        .first-container {
-            display: flex;
-            justify-content: space-evenly;
-            height: 35rem;
-            flex-wrap: wrap;
-            @media @tablet, @desktop {
-            height: 17.5rem;
-                
-            }
 
         .first-item {
-            width: 100%;
-            @media @tablet, @desktop {
-            width: 50%;
-            
-            }
+            .box-size;
             background-color: white;
            
         }
-        .second-item {
-            width: 100%;
-            @media @tablet, @desktop {
-            width: 50%;
-                
-            }
-            background-color: lightgray;
-           
-        }
-        }
+    
+        
         .third-item {
             .box-size;
             background-color: red;
@@ -82,19 +67,35 @@ html {
                     
             }
         }
-        .fourth-item {
-            width: 100%;
-            height: 15.3rem;
-            background-color: gray;
-            @media @tablet, @desktop {
-            height: 60rem;
-            background-color: white;        
+        .four-six-container {
+            display: flex;
+            justify-content: left;
+            height: 160rem;
+            flex-wrap: wrap;
+            @media @tablet {
+            height: 120rem;
             }
+            @media @desktop {
+            height: 60rem;
+            }
+
+            .fourth-item {
+            .mountain-boxes(orange); 
+            }
+            .fifth-item {
+            .mountain-boxes(purple); 
+                }
+                    
+                
+                .sixth-item {
+                    .mountain-boxes(yellow);
+                    }
+                }
         }
         
 
       }
-    }
+    
        /* for everything else, rem = px/10 */
     footer {
         font-size: 13px;
@@ -105,7 +106,8 @@ html {
         font-size: 10px;
         font-size: 1rem;
     }
-  }
+  
+
 
 
   .clearfix::after {
@@ -113,12 +115,4 @@ html {
     clear: both;
     display: table;
 }
-  
-  
-
- 
-
-
-
-  
-
+}
