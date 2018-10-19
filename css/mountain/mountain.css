@@ -228,6 +228,15 @@ html body {
 }
 html body h1 {
   font-size: 3rem;
+  font-weight: 600;
+}
+html body h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+html body h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 html body .main-div {
   height: 100%;
@@ -276,36 +285,25 @@ html body .main-div .first-item {
   width: 100%;
   height: 17.5rem;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-html body .main-div .third-item {
-  width: 100%;
-  height: 17.5rem;
-  background-color: red;
-}
-@media (min-width: 722px), (min-width: 1200px) {
-  html body .main-div .third-item {
-    height: 32rem;
-  }
+html body .main-div .first-item h1 {
+  font-size: 3.5rem;
 }
 html body .main-div .four-six-container {
   display: flex;
   justify-content: left;
-  height: 160rem;
+  height: auto;
   flex-wrap: wrap;
-}
-@media (min-width: 722px) {
-  html body .main-div .four-six-container {
-    height: 120rem;
-  }
-}
-@media (min-width: 1200px) {
-  html body .main-div .four-six-container {
-    height: 60rem;
-  }
 }
 html body .main-div .four-six-container .fourth-item {
   width: 100%;
-  background-color: orange;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 @media (min-width: 722px) {
   html body .main-div .four-six-container .fourth-item {
@@ -316,10 +314,25 @@ html body .main-div .four-six-container .fourth-item {
   html body .main-div .four-six-container .fourth-item {
     width: 33.333%;
   }
+}
+html body .main-div .four-six-container .fourth-item div {
+  margin: 3rem 5rem 3rem 5rem;
+}
+html body .main-div .four-six-container .fourth-item ul {
+  list-style-type: circle;
+}
+html body .main-div .four-six-container .fourth-item figure {
+  width: 100%;
+}
+html body .main-div .four-six-container .fourth-item figure img {
+  width: 100%;
 }
 html body .main-div .four-six-container .fifth-item {
   width: 100%;
-  background-color: purple;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 @media (min-width: 722px) {
   html body .main-div .four-six-container .fifth-item {
@@ -330,10 +343,25 @@ html body .main-div .four-six-container .fifth-item {
   html body .main-div .four-six-container .fifth-item {
     width: 33.333%;
   }
+}
+html body .main-div .four-six-container .fifth-item div {
+  margin: 3rem 5rem 3rem 5rem;
+}
+html body .main-div .four-six-container .fifth-item ul {
+  list-style-type: circle;
+}
+html body .main-div .four-six-container .fifth-item figure {
+  width: 100%;
+}
+html body .main-div .four-six-container .fifth-item figure img {
+  width: 100%;
 }
 html body .main-div .four-six-container .sixth-item {
   width: 100%;
-  background-color: yellow;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 @media (min-width: 722px) {
   html body .main-div .four-six-container .sixth-item {
@@ -344,6 +372,30 @@ html body .main-div .four-six-container .sixth-item {
   html body .main-div .four-six-container .sixth-item {
     width: 33.333%;
   }
+}
+html body .main-div .four-six-container .sixth-item div {
+  margin: 3rem 5rem 3rem 5rem;
+}
+html body .main-div .four-six-container .sixth-item ul {
+  list-style-type: circle;
+}
+html body .main-div .four-six-container .sixth-item figure {
+  width: 100%;
+}
+html body .main-div .four-six-container .sixth-item figure img {
+  width: 100%;
+}
+html body .main-div .footer {
+  width: 100%;
+  height: auto;
+  background-color: gray;
+}
+html body .main-div .footer p {
+  font-size: 1.2rem;
+  padding: 10px 10px 10px 10px;
+}
+html body .main-div .footer figure {
+  padding-left: 10px;
 }
 html footer {
   font-size: 13px;

@@ -5,6 +5,11 @@ html {
         
         h1 {
             font-size: 3rem;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
         }
         height: 100%;
         font-size: 16px; /* px fallback */
@@ -41,59 +46,138 @@ html {
                 transform: translate(-50%, -50%);
                 color: @background-color;
                 button {
-                    .button(@alt-color);
+                    .button(@primary-color);
                 }
             }
         }
         .first-container {
             display: flex;
             justify-content: space-evenly;
-            height: 35rem;
+            
             flex-wrap: wrap;
-            @media @tablet, @desktop {
-            height: 17.5rem;
-                
-            }
+            
 
         .first-item {
             width: 100%;
+            height: 17.5rem;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             @media @tablet, @desktop {
             width: 50%;
-            
             }
-            background-color: white;
-           
+            figure {
+                width: 17.5rem;
+                margin-left: 10px;
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                }
+            }
+            div {
+                width: 60%;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
         }
         .second-item {
             width: 100%;
+            height: 17.5rem;
+            background-color: rgb(216, 206, 206);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             @media @tablet, @desktop {
             width: 50%;
-                
             }
-            background-color: lightgray;
-           
+            figure {
+                width: 17.5rem;
+                margin-left: 10px;
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                }
+            }
+            div {
+                width: 60%;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
         }
         }
         .third-item {
             .box-size;
             background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            figure {
+                width: auto;
+                height: 100%;
+                margin-left: 10px;
+                margin-right: 10px;
+                img {
+                    height: 100%;
+                }
+            }
+            div {
+                display: none;
+                @media @desktop {
+                    display: block;
+                    color: @background-color;
+                    p {
+                        font-size: 2rem;
+                    }
+                    h1 {
+                        font-size: 3.5rem;
+                    }
+                }
+            }
+            @media @desktop {
+                justify-content: space-around;
+            }
             @media @tablet, @desktop {
-            height: 32rem;
-                    
+            height: 32rem;       
+            }
+            
+        }
+        .third-item-b {
+            width: 100%;
+            height: 17.5rem;
+            background-color: rgb(66, 66, 66);
+            color: @background-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            h1 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            p {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            @media @desktop {
+                display: none;
             }
         }
-        .fourth-item {
+        .footer {
             width: 100%;
-            height: 15.3rem;
+            height: auto;
             background-color: gray;
-            @media @tablet, @desktop {
-            height: 60rem;
-            background-color: white;        
+            p {
+                font-size: 1.2rem;
+                padding: 10px 10px 10px 10px;
+            }
+            figure {
+                padding-left: 10px;
             }
         }
         
 
-      }
+
     }
        /* for everything else, rem = px/10 */
     footer {
@@ -113,12 +197,4 @@ html {
     clear: both;
     display: table;
 }
-  
-  
-
- 
-
-
-
-  
-
+}

@@ -130,8 +130,6 @@ html {
   font-size: 62.5%;
   /* Now 10px = 1rem! */
   height: 100%;
-  /* for everything else, rem = px/10 */
-  /* you can safely nest rems, it's still 1rem = 10px */
 }
 html body {
   height: 100%;
@@ -142,9 +140,16 @@ html body {
   line-height: 1.5;
   /* a nice line-height */
   font-family: 'Open Sans', sans-serif;
+  /* for everything else, rem = px/10 */
+  /* you can safely nest rems, it's still 1rem = 10px */
 }
 html body h1 {
   font-size: 3rem;
+  font-weight: 600;
+}
+html body h2 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 html body .main-div {
   height: 100%;
@@ -176,7 +181,7 @@ html body .main-div .hero-image .hero-text {
   }
 }
 html body .main-div .hero-image .hero-text button {
-  background-color: #80888c;
+  background-color: #1d82aa;
   border-radius: 8px;
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -187,67 +192,151 @@ html body .main-div .hero-image .hero-text button {
   color: #fff;
 }
 html body .main-div .hero-image .hero-text button:hover {
-  background-color: #5a5f62;
+  background-color: #145b77;
 }
 html body .main-div .first-container {
   display: flex;
   justify-content: space-evenly;
-  height: 35rem;
   flex-wrap: wrap;
-}
-@media (min-width: 722px), (min-width: 1200px) {
-  html body .main-div .first-container {
-    height: 17.5rem;
-  }
 }
 html body .main-div .first-container .first-item {
   width: 100%;
+  height: 17.5rem;
   background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (min-width: 722px), (min-width: 1200px) {
   html body .main-div .first-container .first-item {
     width: 50%;
   }
 }
+html body .main-div .first-container .first-item figure {
+  width: 17.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+html body .main-div .first-container .first-item figure img {
+  width: 100%;
+}
+html body .main-div .first-container .first-item div {
+  width: 60%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 html body .main-div .first-container .second-item {
   width: 100%;
-  background-color: lightgray;
+  height: 17.5rem;
+  background-color: #d8cece;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (min-width: 722px), (min-width: 1200px) {
   html body .main-div .first-container .second-item {
     width: 50%;
   }
 }
+html body .main-div .first-container .second-item figure {
+  width: 17.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+html body .main-div .first-container .second-item figure img {
+  width: 100%;
+}
+html body .main-div .first-container .second-item div {
+  width: 60%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 html body .main-div .third-item {
   width: 100%;
   height: 17.5rem;
   background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .main-div .third-item figure {
+  width: auto;
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+html body .main-div .third-item figure img {
+  height: 100%;
+}
+html body .main-div .third-item div {
+  display: none;
+}
+@media (min-width: 1200px) {
+  html body .main-div .third-item div {
+    display: block;
+    color: #fff;
+  }
+  html body .main-div .third-item div p {
+    font-size: 2rem;
+  }
+  html body .main-div .third-item div h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  html body .main-div .third-item {
+    justify-content: space-around;
+  }
 }
 @media (min-width: 722px), (min-width: 1200px) {
   html body .main-div .third-item {
     height: 32rem;
   }
 }
-html body .main-div .fourth-item {
+html body .main-div .third-item-b {
   width: 100%;
-  height: 15.3rem;
-  background-color: gray;
+  height: 17.5rem;
+  background-color: #424242;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-@media (min-width: 722px), (min-width: 1200px) {
-  html body .main-div .fourth-item {
-    height: 60rem;
-    background-color: white;
+html body .main-div .third-item-b h1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+html body .main-div .third-item-b p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media (min-width: 1200px) {
+  html body .main-div .third-item-b {
+    display: none;
   }
 }
-html footer {
+html body .main-div .footer {
+  width: 100%;
+  height: auto;
+  background-color: gray;
+}
+html body .main-div .footer p {
+  font-size: 1.2rem;
+  padding: 10px 10px 10px 10px;
+}
+html body .main-div .footer figure {
+  padding-left: 10px;
+}
+html body footer {
   font-size: 13px;
   font-size: 1.3rem;
 }
-html footer small {
+html body footer small {
   font-size: 10px;
   font-size: 1rem;
 }
-.clearfix::after {
+html .clearfix::after {
   content: "";
   clear: both;
   display: table;

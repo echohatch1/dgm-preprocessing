@@ -11,6 +11,15 @@ html {
         
         h1 {
             font-size: 3rem;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
         }
         height: 100%;
         font-size: 16px; /* px fallback */
@@ -55,40 +64,45 @@ html {
         .first-item {
             .box-size;
             background-color: white;
-           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1 {
+                font-size: 3.5rem;
+            }
         }
     
         
-        .third-item {
-            .box-size;
-            background-color: red;
-            @media @tablet, @desktop {
-            height: 32rem;
-                    
-            }
-        }
         .four-six-container {
             display: flex;
             justify-content: left;
-            height: 160rem;
+            height: auto;
             flex-wrap: wrap;
-            @media @tablet {
-            height: 120rem;
-            }
-            @media @desktop {
-            height: 60rem;
-            }
+
 
             .fourth-item {
-            .mountain-boxes(orange); 
+            .mountain-boxes(@background-color); 
             }
+
             .fifth-item {
-            .mountain-boxes(purple); 
+            .mountain-boxes(@background-color);
                 }
                     
                 
                 .sixth-item {
-                    .mountain-boxes(yellow);
+                    .mountain-boxes(@background-color);
+                    }
+                }
+                .footer {
+                    width: 100%;
+                    height: auto;
+                    background-color: gray;
+                    p {
+                        font-size: 1.2rem;
+                        padding: 10px 10px 10px 10px;
+                    }
+                    figure {
+                        padding-left: 10px;
                     }
                 }
         }
